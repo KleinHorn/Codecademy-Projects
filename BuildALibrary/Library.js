@@ -41,6 +41,19 @@ class Book extends Media {
     }
 }
 
+class Movie extends Media {
+    construtor(title, director, runTime) {
+        super(title);
+        this._director = director;
+        this._runTime = runTime;
+    }
+    get director() {
+        return this._director;
+    }
+    get runtime() {
+        return this._runTime;
+    }
+}
 const blah = new Book("Blah", "blahspimus", 500);
 console.log(blah.author);
 console.log(blah.pages);
