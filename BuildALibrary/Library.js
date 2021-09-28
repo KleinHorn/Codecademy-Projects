@@ -68,6 +68,4 @@ class CD extends Media {
         return this._songs;
     }
 }
-const blah = new Book("Blah", "blahspimus", 500);
-console.log(blah.author);
-console.log(blah.pages);
+
