@@ -22,8 +22,10 @@ class Media {
     toggleCheckOutStatus() {
         this._isCheckedOut = !this._isCheckedOut;
     }
-    addRating(rating) {
-        this._ratings.push(rating);
+    addRating() {
+        for (let argument of arguments) {
+            this._ratings.push(argument);
+        }
     }
 }
 
@@ -42,7 +44,7 @@ class Book extends Media {
 }
 
 class Movie extends Media {
-    construtor(title, director, runTime) {
+    constructor(title, director, runTime) {
         super(title);
         this._director = director;
         this._runTime = runTime;
@@ -54,7 +56,6 @@ class Movie extends Media {
         return this._runTime;
     }
 }
-
 class CD extends Media {
     constructor(title, artist, songs) {
         super(title);
@@ -69,3 +70,8 @@ class CD extends Media {
     }
 }
 
+const speed = new Movie("Speed", "Jan de Bont", 116);
+speed.toggleCheckOutStatus();
+console.log(speed.isCheckedOut);
+speed.addRating(1, 1, 5);
+console.log(speed.getAverageRating());
