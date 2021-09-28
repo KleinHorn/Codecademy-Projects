@@ -54,6 +54,20 @@ class Movie extends Media {
         return this._runTime;
     }
 }
+
+class CD extends Media {
+    constructor(title, artist, songs) {
+        super(title);
+        this._artist = artist;
+        this._songs = songs;
+    }
+    get artists() {
+        return this._artist;
+    }
+    get songs() {
+        return this._songs;
+    }
+}
 const blah = new Book("Blah", "blahspimus", 500);
 console.log(blah.author);
 console.log(blah.pages);
