@@ -28,13 +28,19 @@ class Media {
 }
 
 class Book extends Media {
-    constructor()
+    constructor(title, author, pages) {
+        super(title);
+        this._author = author;
+        this._pages = pages;
+    }
+    get author() {
+        return this._author;
+    }
+    get pages() {
+        return this._pages;
+    }
 }
 
-const blah = new Media("Blah");
-blah._ratings = [9, 9, 9, 8];
-console.log(blah.ratings);
-console.log(blah.getAverageRating());
-console.log(blah.isCheckedout); // should return false
-blah.toggleCheckOutStatus();
-console.log(blah.isCheckedout); // should return true
+const blah = new Book("Blah", "blahspimus", 500);
+console.log(blah.author);
+console.log(blah.pages);
