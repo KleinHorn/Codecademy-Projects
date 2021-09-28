@@ -13,4 +13,13 @@ class Media {
     get ratings() {
         return this._ratings;
     }
+    getAverageRating() {
+        return this._ratings.reduce((a, b) => a + b) / this._ratings.length;
+    }
 }
+
+
+const blah = new Media('Blah');
+blah._ratings = [9, 9, 9, 8];
+console.log(blah.ratings);
+console.log(blah.getAverageRating());
