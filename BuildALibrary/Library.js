@@ -7,11 +7,14 @@ class Media {
     get title() {
         return this._title;
     }
-    get isCheckedout() {
+    get isCheckedOut() {
         return this._isCheckedOut;
     }
     get ratings() {
         return this._ratings;
+    }
+    set isCheckedOut(bool) {
+        this._isCheckedOut = bool;
     }
     getAverageRating() {
         return this._ratings.reduce((a, b) => a + b) / this._ratings.length;
@@ -22,6 +25,10 @@ class Media {
     addRating(rating) {
         this._ratings.push(rating);
     }
+}
+
+class Book extends Media {
+    constructor()
 }
 
 const blah = new Media("Blah");
