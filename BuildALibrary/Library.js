@@ -8,6 +8,9 @@ class Media {
         return this._title;
     }
     get isCheckedout() {
-        return this._isCheckedOut
+        return this._isCheckedOut;
+    }
+    get ratings() {
+        return this._ratings;
     }
 }
