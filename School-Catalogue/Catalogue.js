@@ -27,7 +27,9 @@ class School {
         );
     }
     static pickSubstituteTeacher(substituteTeachers) {
-        return substituteTeachers[Math.floor(substituteTeachers.length * Math.random())];
+        return substituteTeachers[
+            Math.floor(substituteTeachers.length * Math.random())
+        ];
     }
 }
 
@@ -57,8 +59,8 @@ class High extends School {
     }
 }
 
-
 module.exports = {
     School: School,
     Primary: Primary,
-} 
+    High: High,
+};
