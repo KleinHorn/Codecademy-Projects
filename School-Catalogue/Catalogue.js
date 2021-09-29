@@ -1,20 +1,20 @@
 class School {
     constructor(name, level, numberOfStudents) {
-        this.name = name;
-        this.level = level;
-        this.numberOfStudents = numberOfStudents;
+        this._name = name;
+        this._level = level;
+        this._numberOfStudents = numberOfStudents;
     }
     get name() {
-        return this.name;
+        return this._name;
     }
     get level() {
-        return this.level;
+        return this._level;
     }
     get numberOfStudents() {
-        return this.numberOfStudents;
+        return this._numberOfStudents;
     }
     set numberOfStudents(n) {
-        this.numberOfStudents = n;
+        this._numberOfStudents = n;
     }
     quickFacts() {}
     static pickSubstituteTeacher() {}
@@ -23,15 +23,22 @@ class School {
 class Primary extends School {
     constructor(name, numberOfStudents, pickupPolicy) {
         super(name, "primary", numberOfStudents);
-        this.pickupPolicy = pickupPolicy;
+        this._pickupPolicy = pickupPolicy;
     }
     get pickupPolicy() {
-        return this.pickupPolicy;
+        return this._pickupPolicy;
     }
 }
 
 class Middle extends School {
     constructor(name, numberOfStudents) {
         super(name, "middle", numberOfStudents);
+    }
+}
+
+class High extends School {
+    constructor(name, numberOfStudents, sportsTeams) {
+        super(name, "high", numberOfStudents);
+        this._sportsTeams = sportsTeams
     }
 }
