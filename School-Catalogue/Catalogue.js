@@ -57,3 +57,5 @@ class High extends School {
     }
 }
 
+
+module.exports = School;
