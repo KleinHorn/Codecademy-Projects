@@ -19,3 +19,13 @@ class School {
     quickFacts() {}
     static pickSubstituteTeacher() {}
 }
+
+class Primary extends School {
+    constructor(name, numberOfStudents, pickupPolicy) {
+        super(name, "primary", numberOfStudents);
+        this.pickupPolicy = pickupPolicy;
+    }
+    get pickupPolicy() {
+        return this.pickupPolicy;
+    }
+}
