@@ -1,5 +1,5 @@
 // Tests for School class
-const School = require("./Catalogue");
+const School = require("./Catalogue").School;
 
 const schoolName = "Name";
 const schoolLevel = "Level";

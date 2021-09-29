@@ -58,4 +58,7 @@ class High extends School {
 }
 
 
-module.exports = School;
+module.exports = {
+    School: School,
+    Primary: Primary,
+} 
