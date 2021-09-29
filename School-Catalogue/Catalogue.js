@@ -14,6 +14,9 @@ class School {
         return this._numberOfStudents;
     }
     set numberOfStudents(n) {
+        if (typeof n !== "number") {
+            console.log("Invalid input: numberOfStudents must be set to a Number.")
+        }
         this._numberOfStudents = n;
     }
     quickFacts() {}
@@ -39,9 +42,9 @@ class Middle extends School {
 class High extends School {
     constructor(name, numberOfStudents, sportsTeams) {
         super(name, "high", numberOfStudents);
-        this._sportsTeams = sportsTeams
+        this._sportsTeams = sportsTeams;
     }
     get sportsTeams() {
-        return this._sportsTeams
+        return this._sportsTeams;
     }
 }
