@@ -15,6 +15,12 @@ h2 {
     font-weight: bold;
     color: white;
 }
+
+span {
+    font-weight: bold;
+    color: blue;
+}
+
 #Brushes {
     background-color: mediumspringgreen;
 }
