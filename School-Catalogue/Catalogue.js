@@ -15,14 +15,20 @@ class School {
     }
     set numberOfStudents(n) {
         if (typeof n !== "number") {
-            console.log("Invalid input: numberOfStudents must be set to a Number.")
+            console.log(
+                "Invalid input: numberOfStudents must be set to a Number."
+            );
         }
         this._numberOfStudents = n;
     }
     quickFacts() {
-        console.log(`${this._name} educates ${this._numberOfStudents} students at the ${this._level} school level.`)
+        console.log(
+            `${this._name} educates ${this._numberOfStudents} students at the ${this._level} school level.`
+        );
     }
-    static pickSubstituteTeacher() {}
+    static pickSubstituteTeacher(substituteTeachers) {
+        return substituteTeachers[Math.floor(substituteTeachers.length * Math.random())];
+    }
 }
 
 class Primary extends School {
@@ -50,3 +56,4 @@ class High extends School {
         return this._sportsTeams;
     }
 }
+
