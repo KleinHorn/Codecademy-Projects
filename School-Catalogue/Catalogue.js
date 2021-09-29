@@ -16,4 +16,6 @@ class School {
     set numberOfStudents(n) {
         this.numberOfStudents = n;
     }
+    quickFacts() {}
+    static pickSubstituteTeacher() {}
 }
