@@ -9,9 +9,11 @@ header {
   width: 100%;
   position: fixed;
   background-color: #333333;
+  z-index: 1;
 }
 
 nav {
+  text-align: center;
   margin: 0;
   padding: 20px 0;
 }
@@ -25,6 +27,8 @@ nav li {
 }
 
 main {
+  top: 80px;
+  position: relative;
   text-align: center;
 }
 
@@ -89,6 +93,8 @@ footer p {
 }
 
 .supporting .col {
+  display: inline-block;
+  width: 200px;
   text-align: center;
 }
 
