@@ -24,10 +24,11 @@ let startOver = document.getElementById('fourth-next-line');
 let lastLyric = document.getElementById('column-optional');
 
 // These statements are "hiding" all the progress buttons, but the first one
-nextTwo.hidden = true;
-nextThree.hidden = true;
-startOver.hidden = true;
-
+if (nextTwo && nextThree && startOver) {
+    nextTwo.hidden = true;
+    nextThree.hidden = true;
+    startOver.hidden = true;
+}
 // Write anonymous event handler property and function for the first progress button
 
 
@@ -38,19 +39,19 @@ startOver.hidden = true;
 
 
 // This is the event handler property and function for the startOver button
-startOver.onclick = function () {
-    nextOne.hidden = false;
-    startOver.hidden = true;
-    document.getElementById('word-one').innerHTML = 'HAP-';
-    document.getElementById('letter-note-one').innerHTML = 'G';
-    document.getElementById('word-two').innerHTML = 'PY';
-    document.getElementById('letter-note-two').innerHTML = 'G';
-    document.getElementById('word-three').innerHTML = 'BIRTH-';
-    document.getElementById('letter-note-three').innerHTML = 'A';
-    document.getElementById('word-four').innerHTML = 'DAY';
-    document.getElementById('letter-note-four').innerHTML = 'G';
-    document.getElementById('word-five').innerHTML = 'TO';
-    document.getElementById('letter-note-five').innerHTML = 'C';
-    document.getElementById('word-six').innerHTML = 'YOU!';
-    document.getElementById('letter-note-six').innerHTML = 'B';
+startOver!.onclick = function () {
+    nextOne!.hidden = false;
+    startOver!.hidden = true;
+    document.getElementById('word-one')!.innerHTML = 'HAP-';
+    document.getElementById('letter-note-one')!.innerHTML = 'G';
+    document.getElementById('word-two')!.innerHTML = 'PY';
+    document.getElementById('letter-note-two')!.innerHTML = 'G';
+    document.getElementById('word-three')!.innerHTML = 'BIRTH-';
+    document.getElementById('letter-note-three')!.innerHTML = 'A';
+    document.getElementById('word-four')!.innerHTML = 'DAY';
+    document.getElementById('letter-note-four')!.innerHTML = 'G';
+    document.getElementById('word-five')!.innerHTML = 'TO';
+    document.getElementById('letter-note-five')!.innerHTML = 'C';
+    document.getElementById('word-six')!.innerHTML = 'YOU!';
+    document.getElementById('letter-note-six')!.innerHTML = 'B';
 }
